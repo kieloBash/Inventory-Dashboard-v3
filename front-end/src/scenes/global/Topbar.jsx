@@ -15,6 +15,7 @@ const Topbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
+  
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
@@ -34,9 +35,9 @@ const Topbar = () => {
       <Box display="flex" p={0} m={0}>
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (
-            <DarkModeOutlinedIcon />
-          ) : (
             <LightModeOutlinedIcon />
+            ) : (
+            <DarkModeOutlinedIcon />
           )}
         </IconButton>
         <IconButton>
